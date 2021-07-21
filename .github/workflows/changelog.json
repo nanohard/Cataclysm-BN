@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "title": "## 🚀 Features",
+      "labels": ["feature"]
+    },
+    {
+      "title": "## 🐛 Fixes",
+      "labels": ["fix"]
+    }
+  ],
+  "ignore_labels": [
+    "ignore",
+    "wont-fix"
+  ],
+  "sort": "ASC",
+  "template": "${{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n${{UNCATEGORIZED}}\n</details>",
+  "pr_template": "- PR #${{NUMBER}} $1",
+  "empty_template": "- no changes",
+  "transformers": [
+    {
+      "pattern": "\\\"(.*?)\\\"",
+      "target": "$1"
+    }
+  ],
+  "max_tags_to_fetch": 200,
+  "max_pull_requests": 200,
+  "max_back_track_time_days": 365,
+  "tag_resolver": {
+    "method": "sort"
+  }
+}
