@@ -40,6 +40,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           custom_tag: ${{ steps.generate_env_vars.outputs.tag_name }}
           tag_prefix: ""
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Build Changelog
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v2.1.0
