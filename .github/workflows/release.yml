@@ -42,7 +42,7 @@ jobs:
           tag_prefix: ""
       - name: Build Changelog
         id: build_changelog
-        uses: mikepenz/release-changelog-builder-action@{latest-release}
+        uses: mikepenz/release-changelog-builder-action@v2.1.0
         with:
           configuration: "changelog.json"
         env:
@@ -56,7 +56,7 @@ jobs:
         with:
           tag_name: ${{ steps.generate_env_vars.outputs.tag_name }}
           release_name: ${{ steps.generate_env_vars.outputs.release_name }}
-          body: ${{steps.build_changelog.outputs.changelog}}
+          body: ${{ steps.build_changelog.outputs.changelog }}
             |
             These are the outputs for the experimental build of commit [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
           draft: false
