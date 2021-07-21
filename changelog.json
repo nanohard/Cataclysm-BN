@@ -15,7 +15,7 @@
   ],
   "sort": "ASC",
   "template": "${{CHANGELOG}}\n\n${{UNCATEGORIZED}}\n\n",
-  "pr_template": "- PR: #${{NUMBER}} ... ${{TITLE}}",
+  "pr_template": "- PR: #${{NUMBER}} **${{TITLE}}** by ${{AUTHOR}}",
   "empty_template": "- no changes",
 
   "max_tags_to_fetch": 200,
