@@ -42,7 +42,7 @@ jobs:
           tag_prefix: ""
       - uses: actions/checkout@v2
       - run: |
-          git fetch --prune --tags --shallow-since="1 month"
+          git fetch origin tag ${{ steps.generate_env_vars.outputs.tag_name }} --no-tags
       - name: Build Changelog
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v2.1.0
