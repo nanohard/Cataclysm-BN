@@ -42,7 +42,7 @@ jobs:
           tag_prefix: ""
       - uses: actions/checkout@v2
       - run: |
-          git fetch --tags
+          git fetch --prune --tags
       - name: Build Changelog
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v2.1.0
